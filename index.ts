@@ -30,4 +30,5 @@ const characters = await getCharactersByTvShow(showsByPlatforms[1]._id);
 console.log(`These are my characters ${characters}`);
 const tvShowsByName = await getShowsByName('30');
 console.log(tvShowsByName);
-}
+};
+run();
