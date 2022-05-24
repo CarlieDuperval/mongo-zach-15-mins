@@ -2,6 +2,8 @@ import { getDb } from './db';
 
 interface Platform {
   name:string;
+  price: number;
+  hasFreeTrial:boolean;
 }
 
 const getCollection = async () => {

@@ -1,9 +1,11 @@
 import { ObjectId } from 'mongodb';
 import { getDb } from './db';
-// Tvshows is the type () and tvShow is a parameter
+// TvShows is the type () and tvShow is a parameter
 interface TvShows {
   name:string;
-  platformIds: ObjectId[];
+  platformIds: string[];
+  genre:string
+  maturityRating:'G'| 'PG'| 'PG-13'|'R'| 'NC-17' ;
 }
 
 const getCollection = async () => {
