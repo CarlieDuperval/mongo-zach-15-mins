@@ -26,10 +26,11 @@ export const getTvShows = async () => {
   return ret.toArray();
 };
 
-export const getShowsByPlatform = async (platformId: ObjectId) => {
+export const getShowsByPlatform = async (platformId: string) => {
   const col = await getCollection();
   const ret = col.find({
-    platformId,
+    //platformId,
+    platformIds: {$all: [platformId]},
   });
   return ret.toArray();
 };

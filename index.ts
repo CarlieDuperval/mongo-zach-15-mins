@@ -29,7 +29,7 @@ await createTvShows({
 maturityRating:'PG'
 
 });
-const showsByPlatforms = await getShowsByPlatform(platforms[0]._id);
+const showsByPlatforms = await getShowsByPlatform(platforms[0]._id.toString());
 console.log(`${platforms[0].name} 2nd TV Show: ${showsByPlatforms[1].name}`);
 
 const tvShows = await getTvShows();
